@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html 
+xmlns:th="https://thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Olá, mundo!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></link>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <img src="data:image/jpeg;base64,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" width="30" height="30" alt="">
+
+        <a class="navbar-brand" href="#">Bar do Miltinho</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> 
+            
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </nav>
+
+
+    <div class="container">
+
+        <table class="table">
+            <thead>
+                <tr>
+                  <td>ID</td>
+                  <td>Nome</td>
+                  <td>Sigla</td>
+                  <td>Ação</td>
+                </tr>
+            </thead>
+    
+            <tbody th:each="estado: ${listaEstados}">
+                <tr>
+                    <td th:text="${estado.id}"></td>
+                    <td th:text="${estado.nome}"></td>
+                    <td th:text="${estado.sigla}"></td>
+                    <td dolspan="2">    
+                        <a th:href="@{/editarEstado/{id}(id=${estado.id})}"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a th:href="@{/removerEstado/{id}(id=${estado.id})}"><i class="fa-regular fa-trash-can"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+    
+        </table>
+
+            <a  href="/administrativo" class="btn btn-danger">Voltar</a>
+        
+       
+
+         
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
